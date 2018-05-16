@@ -1,88 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/cityName"
-        android:layout_width="wrap_content"
-        android:minHeight="40dp"
-        android:minWidth="80dp"
-        android:textColor="#fff"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
-        tools:text="Kiev" />
-
-    <ImageView
-        android:id="@+id/weatherIcon"
-        android:layout_width="61dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/ff"
-        app:layout_constraintEnd_toEndOf="@+id/temperature"
-        app:layout_constraintStart_toStartOf="@+id/temperature"
-        app:layout_constraintTop_toBottomOf="@+id/temperature"
-        tools:background="@color/black"
-        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/temperature"
-        android:layout_width="50dp"
-        tools:background="#000"
-        android:textSize="30sp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    <ImageButton
-        android:id="@+id/refresh_button"
-        android:layout_width="88dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/reffresh_button3"
-        android:onClick="getWeather"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="gone"
-        android:contentDescription="@string/todo" />
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:background="#fff"
+        android:background="@android:color/black" />
 
     <android.support.v7.widget.RecyclerView
-        android:layout_width="358dp"
-        android:layout_height="291dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/background_light"
+
+        android:layout_gravity="center">
 
     </android.support.v7.widget.RecyclerView>
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="183dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp"></LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    </android.support.v7.widget.RecyclerView>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
